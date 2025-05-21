@@ -15,11 +15,24 @@ Algorithm:
  
 Program:
 
-//type your code here
+struct Node
+{
+int data;
+struct Node *next;
+}*head;
+void display()
+{
+struct Node *p; p=head; while(p!=NULL)
+{
+printf("%d\n",p->data); p=p->next;
+}
+}
+
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/e7e23db6-f1b6-4fc9-bd7e-a47c19cbe110)
+
 
 
 Result:
@@ -40,11 +53,27 @@ Algorithm:
  
 Program:
 
-//type your code here
+struct Node
+{
+int data;
+struct Node *next;
+}*head; void pop()
+{
+if(head==NULL)
+{
+printf("stack is empty");
+}
+else
+{
+head=head->next;
+}
+}
+
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/666bc2c3-bb7f-4da8-ad94-108d050cec5d)
+
 
 
 
@@ -64,11 +93,30 @@ Algorithm:
  
 Program:
 
-//type your code here
+struct Node
+{
+char data;
+struct Node *next;
+}*front=NULL,*rear=NULL; void display()
+{
+if(front==NULL)
+{
+printf("queue is empty");
+}
+else
+{
+printf("queue elements:\n"); while(front!=NULL)
+{
+printf("%c\n",front->data); front=front->next;
+}
+}
+}
+
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/7c7ddb5a-d69f-4080-9f16-33963b6e1306)
+
 
 Result:
 Thus, the program to display queue elements using linked list is verified successfully.
@@ -89,12 +137,28 @@ Algorithm:
 6.	End of Enqueue Operation
  
 Program:
+struct Node
+{
+int data;
+struct Node *next;
+}*front=NULL,*rear=NULL; void enqueue(int data)
+{
+struct Node *p=(struct Node*)malloc(sizeof(struct Node)); p->data=data;
+p->next=NULL; if(front==NULL)
+{
+front=rear=p;
+}
+else
+{
+rear->next=p; rear=p;
+}
+}
 
-//type your code here
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/0fe1a169-7acb-40c6-9bec-90a34cf67fe1)
+
 
 Result:
 Thus, the program to insert elements in queue using linked list is verified successfully.
@@ -117,11 +181,21 @@ o	If the queue is not empty, return the data stored in the front node of the lin
 
 Program:
 
-//type your code here
+struct Node
+{
+   char data;
+   struct Node *next;
+}*front=NULL,*rear=NULL;
+void peek()
+{
+    printf("%c",front->data);
+}
+
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/60ea5900-b2e8-4274-a3b6-06393bf62be7)
+
 
 
 
